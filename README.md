@@ -47,7 +47,7 @@ sistema-cadastro-python/
 
 1. Clone o repositório:
 
-git clone https://github.com/seuusuario/sistema-cadastro-python.git
+git clone https://github.com/Alex-Hub176/sistema-cadastro-python.git
 
 2. Entre na pasta:
 
