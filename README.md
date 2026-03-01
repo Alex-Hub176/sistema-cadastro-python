@@ -67,6 +67,10 @@ organização de código e boas práticas com Python.
 
 ---
 
+-- O arquivo "pessoas.json" contém dados fictícios apenas para fins de teste.
+
+---
+
 Autor
 
 Alex S.
