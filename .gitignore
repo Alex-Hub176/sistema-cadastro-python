@@ -1,19 +1,14 @@
-# Byte-compiled / cache
+# Cache do Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Arquivos de ambiente virtual
+# Ambiente virtual
 venv/
 .env/
 
-# Arquivos do VS Code
+# Configuração do VS Code
 .vscode/
 
 # Arquivos do sistema
 .DS_Store
 Thumbs.db
-
-# Arquivo de dados local (opcional)
-pessoas.json

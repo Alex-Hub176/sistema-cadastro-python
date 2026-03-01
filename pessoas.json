@@ -1,0 +1,23 @@
+[
+    {
+        "nome": "Jo\u00e3o",
+        "idade": 32,
+        "numero": "158735333",
+        "ddd": "15",
+        "uf": "SP"
+    },
+    {
+        "nome": "Ana",
+        "idade": 23,
+        "numero": "4198276333",
+        "ddd": "41",
+        "uf": "PR"
+    },
+    {
+        "nome": "Joao ",
+        "idade": 32,
+        "numero": "8922",
+        "ddd": "89",
+        "uf": "PI"
+    }
+]
