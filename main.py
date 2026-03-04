@@ -1,33 +1,19 @@
 import pacote
+from colorama import init,Back,Style,Fore
 
-print('--'*10)
-print("   CADASTRO DE PESSOAS    ")
-print('--'*10)
+init(autoreset=True)
 
 pessoa = {}
 dados = []
 
-while True:
-    print("""
-        Oque você quer fazer?
-        [1] Registrar novo Cadastro.
-        [2] Buscar Cadastrados pelo Nome.
-        [3] Buscar Cadastrados pelo Teléfone.
-        [4] Deletar Algum Cadastrado.
-        [5] Sair
-        """)
-    escolha = str(input("Escolha: ")).strip()
 
-    while escolha not in ["1","2","3","4","5"]:
-        print("ERRO! Escolha uma dessas opções")
-        print("""
-        [1] Registrar novo Cadastro.
-        [2] Buscar Cadastrados pelo Nome.
-        [3] Buscar Cadastrados pelo Teléfone.
-        [4] Deletar Algum Cadastrado.
-        [5] Sair
-         """)
-        escolha = str(input("Escolha: ")).strip()
+
+while True:
+
+    pacote.Interface.menu()
+    escolha = str(input("Escolha: ")).strip()
+    pacote.Interface.linha()
+    
 
     if escolha == "1":
             pessoa["nome"] = str(input("Nome: "))
