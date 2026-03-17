@@ -16,26 +16,24 @@ def deletar_pessoa(numero):
 
     while not any(p["numero"] == numero for p in pessoas):
         print("Número não encontrado. \n Tente novamente!")
-        numero = input("Digite um número válido: ").strip()
-        continuar = str(input("Que continuar? [S/N]: ")).strip().upper()[0]
-        if continuar == "N":
-            break
-
-        
+        break
+    
     for pessoa in pessoas:
         if pessoa["numero"] == numero:
             print(f"Será apagada essa pessoa {pessoa}")
-
-        while True:
             resposta = str(input("Tem certeza? [S/N]: ")).strip().upper()[0]
-            if resposta in ("S", "N"):
-                break
-            print("Digite apenas S ou N.")
 
-        if resposta == "S":
-            pessoas.remove(pessoa)
-            print("APAGADO")
-        break
+            while resposta not in ("S","N"):
+                print("Digite apenas S ou N.")
+                resposta = str(input("Ainda quer deletar? [S/N]: ")).strip().upper()[0]
+
+            if resposta == "S":
+                pessoas.remove(pessoa)
+                print("APAGADO")
+            elif resposta == "N":
+                print("Saindo...")
+    
+            break            
 
     with open("pessoas.json", "w") as f:
             json.dump(pessoas, f, indent=4)

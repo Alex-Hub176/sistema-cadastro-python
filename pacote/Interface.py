@@ -1,6 +1,3 @@
-from colorama import Fore,init
-
-init(autoreset=True)
 
 def linha(tam=44):
     return "-" * tam
@@ -13,12 +10,12 @@ def titulo(texto):
 
 
 def menu():
-    titulo(Fore.BLUE + "CADASTRO DE PESSOAS")
+    titulo("CADASTRO DE PESSOAS")
 
     lista = ["[1] - Registrar novo cadastro.", "[2] - Buscar Cadastrados pelo Nome.", "[3] - Buscar Cadastrados pelo Teléfone.", "[4] - Deletar Cadastrados pelo Teléfone.", "[5] - Sair."]
 
     for items in lista:
-        print(Fore.GREEN + items)
+        print(items)
         print(linha())
         
         

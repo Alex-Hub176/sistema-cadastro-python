@@ -1,7 +1,4 @@
 import pacote
-from colorama import init,Back,Style,Fore
-
-init(autoreset=True)
 
 pessoa = {}
 dados = []
