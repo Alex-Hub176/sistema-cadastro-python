@@ -39,7 +39,7 @@ sistema-cadastro-python/
 │ ├── buscar.py
 │ ├── salvar_deletar.py
 │ └── validacao.py
-
+│ └── interface.py
 
 ---
 
@@ -47,15 +47,16 @@ sistema-cadastro-python/
 
 1. Clone o repositório:
 
-git clone https://github.com/Alex-Hub176/sistema-cadastro-python.git
+    git clone https://github.com/Alex-Hub176/sistema-cadastro-python.git
 
 2. Entre na pasta:
 
-cd sistema-cadastro-python
+    Escreva ou cole no Terminal:
+    cd sistema-cadastro-python
 
 3. Execute:
 
-python main.py
+    python main.py
 
 
 ---
