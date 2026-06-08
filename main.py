@@ -13,30 +13,32 @@ while True:
     
 
     if escolha == "1":
-            pessoa["nome"] = str(input("Nome: "))
-            pessoa["idade"] = pacote.Validacao.idade()
-            pessoa["numero"] = str(input("Número de Telefone: "))
-            pessoa["ddd"] = pessoa["numero"][0:2]
-            pessoa["uf"] = pacote.Buscar.buscar_uf(pessoa["ddd"])
+            nome = str(input("Nome: "))
+            idade = pacote.Validacao.idade()
+            email = str(input("Email: "))
+            telefone = str(input("Número de Telefone: "))
 
-            pacote.Salvar_Deletar.salvar_dados(pessoa)
+            pacote.inserir.adicionar(nome,idade,email,telefone)
         
 
     elif escolha == "2":
-        nome = str(input("Nome: ")).strip()
-        pacote.Buscar.buscar_pessoa("2",nome=nome)
+        id = int(input("Id: "))
+        pacote.consulta.buscar(id,1)
 
     elif escolha == "3":
-        telefone = str(input("Telefone: ")).strip()
-        pacote.Buscar.buscar_pessoa("3",numero=telefone)
+        email = str(input("Email: ")).strip()
+        pacote.consulta.buscar(email,2)
 
     elif escolha == "4":
-        deletar = str(input("Digite o número do Telefone de quem você quer Deletar: "))  
-        pacote.Salvar_Deletar.deletar_pessoa(deletar)
+        id = int(input("Id: "))  
+        pacote.deletar.delete(id,1)
 
     elif escolha == "5":
-        break
+        email = str(input("Email: ")).strip()
+        pacote.deletar.delete(email,2)
     
+    elif escolha == "6":
+         break
     
 
     

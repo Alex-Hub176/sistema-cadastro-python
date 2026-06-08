@@ -12,7 +12,7 @@ def titulo(texto):
 def menu():
     titulo("CADASTRO DE PESSOAS")
 
-    lista = ["[1] - Registrar novo cadastro.", "[2] - Buscar Cadastrados pelo Nome.", "[3] - Buscar Cadastrados pelo Teléfone.", "[4] - Deletar Cadastrados pelo Teléfone.", "[5] - Sair."]
+    lista = ["[1] - Registrar novo cadastro.", "[2] - Buscar Cadastrados pelo id.", "[3] - Buscar Cadastrados pelo Email.", "[4] - Deletar Cadastrados pelo id.", "[5] - Deletar Cadastrados pelo Email.", "[6] - Sair."]
 
     for items in lista:
         print(items)

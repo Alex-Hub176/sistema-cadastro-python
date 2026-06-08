@@ -1,4 +1,5 @@
-from . import Salvar_Deletar
-from . import Buscar
 from . import Validacao
 from . import Interface
+from . import inserir
+from . import consulta
+from . import deletar
