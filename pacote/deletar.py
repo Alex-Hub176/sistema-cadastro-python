@@ -1,5 +1,5 @@
 import sqlite3 
-from database import conectar
+from pacote.database import conectar
 
 def delete(dados,escolha):
     comando_id = ('DELETE FROM user WHERE id = (?)')

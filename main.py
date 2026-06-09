@@ -1,9 +1,5 @@
 import pacote
 
-pessoa = {}
-dados = []
-
-
 
 while True:
 
@@ -11,35 +7,48 @@ while True:
     escolha = str(input("Escolha: ")).strip()
     pacote.Interface.linha()
     
+    match escolha:
 
-    if escolha == "1":
-            nome = str(input("Nome: "))
-            idade = pacote.Validacao.idade()
-            email = str(input("Email: "))
-            telefone = str(input("Número de Telefone: "))
+        case "1":
+                nome = str(input("Nome: "))
+                idade = pacote.Validacao.idade()
+                email = str(input("Email: "))
+                telefone = str(input("Número de Telefone: "))
 
-            pacote.inserir.adicionar(nome,idade,email,telefone)
+                pacote.inserir.adicionar(nome,idade,email,telefone)
+            
+
+        case "2":
+            while True:
+                try:
+                    id = int(input("Id: "))
+                    pacote.consulta.buscar(id,1)
+                    break
+                except ValueError:
+                    print("Digite números Inteiros")
+                    
+
+
+        case "3":
+            email = str(input("Email: ")).strip()
+            pacote.consulta.buscar(email,2)
+
+        case "4":
+            while True:
+                try:
+                    id = int(input("Id: "))  
+                    pacote.deletar.delete(id,1)
+                    break
+                except ValueError:
+                    print("Digite números Inteiros")
+
+        case "5":
+            email = str(input("Email: ")).strip()
+            pacote.deletar.delete(email,2)
+            
+        case "6":
+            break
         
-
-    elif escolha == "2":
-        id = int(input("Id: "))
-        pacote.consulta.buscar(id,1)
-
-    elif escolha == "3":
-        email = str(input("Email: ")).strip()
-        pacote.consulta.buscar(email,2)
-
-    elif escolha == "4":
-        id = int(input("Id: "))  
-        pacote.deletar.delete(id,1)
-
-    elif escolha == "5":
-        email = str(input("Email: ")).strip()
-        pacote.deletar.delete(email,2)
-    
-    elif escolha == "6":
-         break
-    
 
     
 

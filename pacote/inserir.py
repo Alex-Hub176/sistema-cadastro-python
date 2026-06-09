@@ -1,5 +1,5 @@
 import sqlite3
-from database import conectar
+from pacote.database import conectar
 
 def adicionar(nome,idade,email,telefone):
     comando = ("INSERT INTO user (nome, idade, email, telefone) VALUES (?,?,?,?)")

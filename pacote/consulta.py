@@ -1,5 +1,5 @@
 import sqlite3
-from database import conectar
+from pacote.database import conectar
 
 def buscar(dados,escolha):
     comando_id = ('SELECT * FROM user WHERE id = (?)')
