@@ -47,6 +47,25 @@ while True:
             pacote.deletar.delete(email,2)
             
         case "6":
+            pacote.Interface.menu_atualizar()
+            opcao = input("Qual campo deseja atualizar? ")
+
+            campos = {
+                "1": "nome",
+                "2": "idade",
+                "3": "email",
+                "4": "telefone"
+            }
+
+            campo = campos.get(opcao)
+            
+            if campo:
+                id = int(input("Id: "))
+                novo_valor = input("Novo valor: ").strip()
+                pacote.atualizar.alterar(id, campo, novo_valor)
+
+
+        case "7":
             break
         
 
