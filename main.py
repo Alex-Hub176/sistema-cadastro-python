@@ -12,39 +12,32 @@ while True:
         case "1":
                 nome = str(input("Nome: "))
                 idade = pacote.Validacao.idade()
-                email = str(input("Email: "))
-                telefone = str(input("Número de Telefone: "))
-
+                email = pacote.Validacao.pedir_email()
+                telefone = pacote.Validacao.telefone()
+            
                 pacote.inserir.adicionar(nome,idade,email,telefone)
             
 
         case "2":
-            while True:
-                try:
-                    id = int(input("Id: "))
-                    pacote.consulta.buscar(id,1)
-                    break
-                except ValueError:
-                    print("Digite números Inteiros")
-                    
+            id = pacote.Validacao.pedir_id()
+            pacote.consulta.buscar(id,1)
 
 
         case "3":
-            email = str(input("Email: ")).strip()
+            email = pacote.Validacao.pedir_email()
             pacote.consulta.buscar(email,2)
 
         case "4":
-            while True:
-                try:
-                    id = int(input("Id: "))  
-                    pacote.deletar.delete(id,1)
-                    break
-                except ValueError:
-                    print("Digite números Inteiros")
+            id = pacote.Validacao.pedir_id()
+            confirma = input("Tem certeza? (s/n): ").lower().strip()
+            if confirma:
+                pacote.deletar.delete(id,1)
 
         case "5":
-            email = str(input("Email: ")).strip()
-            pacote.deletar.delete(email,2)
+            email = pacote.Validacao.pedir_email()
+            confirmacao = input("Tem certeza? (s/n): ").lower().strip()
+            if confirmacao:
+                pacote.deletar.delete(email,2)
             
         case "6":
             pacote.Interface.menu_atualizar()
@@ -60,7 +53,7 @@ while True:
             campo = campos.get(opcao)
             
             if campo:
-                id = int(input("Id: "))
+                id = pacote.Validacao.pedir_id()
                 novo_valor = input("Novo valor: ").strip()
                 pacote.atualizar.alterar(id, campo, novo_valor)
 
