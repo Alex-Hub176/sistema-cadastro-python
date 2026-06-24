@@ -1,77 +1,115 @@
-🧾 Sistema de Cadastro de Pessoas
+# 🧾 Sistema de Cadastro de Pessoas
 
-Projeto desenvolvido em Python com foco em prática de:
-- Modularização
-- Organização em pacotes
-- Manipulação de arquivos JSON
-- Validação de dados
-- Estruturação para backend
+Sistema de cadastro desenvolvido em Python com foco em aprendizado de desenvolvimento Back-end, modularização de código, persistência de dados com SQLite e boas práticas de programação.
 
----
+## 🚀 Funcionalidades
 
-🚀 Funcionalidades
+✔️ Cadastrar pessoas
 
-✔️ Cadastrar nova pessoa  
-✔️ Buscar por nome  
-✔️ Buscar por telefone  
-✔️ Deletar cadastro  
-✔️ Validação de idade  
+✔️ Buscar cadastro por ID
 
----
+✔️ Buscar cadastro por E-mail
 
-🛠️ Tecnologias Utilizadas
+✔️ Atualizar informações de um cadastro
 
-- Python 3
-- JSON
-- Git
-- GitHub
+✔️ Excluir cadastro por ID
+
+✔️ Excluir cadastro por E-mail
+
+✔️ Validação de idade
+
+✔️ Validação de e-mail
+
+✔️ Validação de telefone
+
+✔️ Tratamento de entradas inválidas
 
 ---
 
-📂 Estrutura do Projeto
+## 🛠️ Tecnologias Utilizadas
 
+* Python 3
+* SQLite3
+* Git
+* GitHub
 
+---
+
+## 📂 Estrutura do Projeto
+
+```text
 sistema-cadastro-python/
 │
 ├── main.py
-├── pessoas.json
+├── dados/
+│   └── cadastros.db
+│
 ├── pacote/
-│ ├── buscar.py
-│ ├── salvar_deletar.py
-│ └── validacao.py
-│ └── interface.py
+│   ├── Interface.py
+│   ├── Validacao.py
+│   ├── database.py
+│   ├── inserir.py
+│   ├── consulta.py
+│   ├── atualizar.py
+│   ├── deletar.py
+│   └── __init__.py
+│
+├── README.md
+└── LICENSE
+```
 
 ---
 
-▶️ Como Executar
+## ▶️ Como Executar
 
-1. Clone o repositório:
+### 1. Clone o repositório
 
-    git clone https://github.com/Alex-Hub176/sistema-cadastro-python.git
+```bash
+git clone https://github.com/Alex-Hub176/sistema-cadastro-python.git
+```
 
-2. Entre na pasta:
+### 2. Acesse a pasta do projeto
 
-    Escreva ou cole no Terminal:
-    cd sistema-cadastro-python
+```bash
+cd sistema-cadastro-python
+```
 
-3. Execute:
+### 3. Execute o programa
 
-    python main.py
-
-
----
-
-🎯 Objetivo do Projeto
-
-Este projeto foi desenvolvido com foco em aprendizado de backend,
-organização de código e boas práticas com Python.
+```bash
+python main.py
+```
 
 ---
 
--- O arquivo "pessoas.json" contém dados fictícios apenas para fins de teste.
+## 🎯 Objetivo do Projeto
+
+Este projeto foi desenvolvido com o objetivo de praticar:
+
+* Programação em Python
+* Modularização
+* Manipulação de banco de dados SQLite
+* Operações CRUD (Create, Read, Update e Delete)
+* Validação de dados
+* Organização de projetos Back-end
 
 ---
 
-Autor
+## 📚 Aprendizados Aplicados
+
+Durante o desenvolvimento deste projeto foram praticados conceitos como:
+
+* Funções
+* Estruturas de repetição
+* Tratamento de exceções
+* Programação modular
+* SQL básico
+* Persistência de dados
+* Organização de código em pacotes
+* Boas práticas de validação de entrada
+
+---
+
+## 👨‍💻 Autor
 
 Alex S.
